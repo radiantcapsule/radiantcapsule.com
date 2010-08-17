@@ -12,7 +12,7 @@ body
   margin: 0
   padding: 0
   background-color: white
-  font-family: "gesta-1","gesta-2",sans-serif
+  font-family: "gesta-1", "gesta-2", sans-serif
   font-size: $default-text-size
 
 #masthead
@@ -20,12 +20,11 @@ body
   height: 330px
   #logo
     +prepend(1)
-    +column(13)
     padding-top: 9px
   #contact
-    +prepend(5)
-    +column(5, true)
-    padding-top: 62px
+    position: absolute
+    right: 0px
+    top: 61px
 
 #columns
   +column(24, true)
