@@ -4,16 +4,20 @@ require "rubygems"
 require "bundler"
 Bundler.setup
 
+require "compass"
+Compass.add_project_configuration 'config/compass.rb'
+
 preprocess do
   system "rsync -gprt --partial public/ output"
 end
 
 compile '/css/*/' do
-  filter :sass, {
-    :load_paths => [Dir.pwd + "/content/css"],
-    :full_exception => true,
-    :line_numbers => true
-  }
+  filter :sass, Compass.sass_engine_options
+  # filter :sass, {
+  #   :load_paths => [Dir.pwd + "/content/css"],
+  #   :full_exception => true,
+  #   :line_numbers => true
+  # }
 end
 
 compile '*' do

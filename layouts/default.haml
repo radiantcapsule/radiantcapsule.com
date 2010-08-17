@@ -2,7 +2,10 @@
 %html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
     %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "content-type" }
-    %link{ :href => "/css/main.css", :rel => "stylesheet", :type => "text/css" }    
+    %link{ :href => "/css/main.css", :media => "screen", :type => "text/css", :rel => "stylesheet" }
+    %script{:src => "http://use.typekit.com/rzk7ztj.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
     %title Radiant Capsule LLC
   %body
     = yield

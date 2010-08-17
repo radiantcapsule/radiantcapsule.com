@@ -1,33 +1,51 @@
-@import "blueprint/grid.css"
-@import "compass/css3/border-radius.css"
-@import "compass/css3/gradient.css"
-@import "compass/css3/text-shadow.css"
-@import "compass/layout/sticky-footer.css"
-@import "blueprint/debug.css"
+@import "blueprint/grid"
+@import "compass/css3/border-radius"
+@import "compass/css3/gradient"
+@import "compass/css3/text-shadow"
+@import "compass/layout/sticky-footer"
+@import "blueprint/debug"
 @import "defaults"
 
 body
   /* +showgrid */
 
+  margin: 0
+  padding: 0
   background-color: white
-  font-family: 'Helvetica', sans-serif
+  font-family: "gesta-1","gesta-2",sans-serif
   font-size: $default-text-size
 
 #masthead
-  background-image: url("/images/sky.png")
-  +column(24, true)
+  background: url("/images/sky.png") no-repeat
   height: 330px
+  #logo
+    +prepend(1)
+    +column(13)
+    padding-top: 9px
+  #contact
+    +prepend(5)
+    +column(5, true)
+    padding-top: 62px
 
 #columns
   +column(24, true)
+  .title, .icon
+    text-align: center
+    margin-bottom: 18px
+  strong
+    color: #0040be
+    display: block
+    font-size: 1.2em
+    margin-bottom: 9px
+
   #mobile
-    +push-margin(1)
-    +column(6)
+    +prepend(1)
+    +column(7)
 
   #web
-    +push-margin(1)
-    +column(6)
+    +prepend(1)
+    +column(7)
 
   #philosophy
-    +push-margin(1)
-    +column(6, true)
+    +prepend(1)
+    +column(7, true)
