@@ -18,26 +18,24 @@ body
 
 #masthead
   background: url("/images/sky.png") no-repeat
-  height: 330px
+  height: 320px
   #logo
     +prepend(1)
+    +column(16)
     padding-top: 9px
   #contact
-    position: absolute
-    right: 0px
-    top: 61px
-  #info
-    color: #efefef
-    position: absolute
-    right: 1px
-    top: 97px
-    font-size: 14px
-    width: 200px
-    padding: 4px
-    a, a:visited
+    +column(7, true)
+    padding-top: 54px
+    padding-right: 12px
+    text-align: right
+    #info
       color: #efefef
-    div
-      margin: 6px 0
+      font-size: 14px
+      padding: 4px
+      a, a:visited
+        color: #efefef
+      div
+        margin: 6px 0
 
 #columns
   +column(24, true)
@@ -57,11 +55,14 @@ body
   #mobile
     +prepend(1)
     +column(7)
+    margin-bottom: 36px
 
   #web
     +prepend(1)
     +column(7)
+    margin-bottom: 36px
 
   #philosophy
     +prepend(1)
     +column(7, true)
+    margin-bottom: 36px
