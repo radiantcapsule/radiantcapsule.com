@@ -1,67 +1,105 @@
 @import "blueprint/grid"
-@import "compass/css3/border-radius"
+@import "compass/css3"
 @import "compass/css3/gradient"
 @import "compass/css3/text-shadow"
+@import "compass/css3/box-shadow"
 @import "compass/layout/sticky-footer"
 @import "blueprint/debug"
 @import "defaults"
 
-body
-  /* +showgrid */
+$default-box-shadow-blur: 25px
+$default-text-shadow-color: rgba(white, .9)
+$default-text-shadow-blur: 0px
+$default-text-shadow-v-offset: 1px
 
+
+body
   margin: 0
   padding: 0
   background-color: white
   font-family: "gesta-1", "gesta-2", sans-serif
   font-size: $default-text-size
-  background: url("/images/fade.png") repeat-x
+  background: url("/images/speckles.png")
 
-#masthead
-  height: 320px
-  #logo
-    +prepend(1)
-    +column(16)
-    padding-top: 9px
-  #contact
-    +column(7, true)
-    padding-top: 54px
-    padding-right: 12px
-    text-align: right
-    #info
-      color: #efefef
-      font-size: 14px
-      padding: 4px
-      a, a:visited
-        color: #efefef
-      div
-        margin: 6px 0
+#panel
+  background: url("/images/background-capsule.png") center top no-repeat
+  position: fixed
+  top: 50%
+  left: 50%
+  margin-left: -495px
+  margin-top: -450px
+  height: 990px
+  width: 946px
 
-#columns
-  +column(24, true)
-  .title, .icon
-    text-align: center
-    margin-bottom: 18px
-  .icon
-    height: 180px
-    img
-      margin-left: -10px
-  strong
-    color: #0040be
-    display: block
-    font-size: 1.2em
-    margin-bottom: 9px
+  #inner-panel
+    margin-top: 120px
+    +column(24, true)
+    +single-box-shadow
+    @include border-radius(10px)
+    h1
+      color: #0040be
+      font-size: 1.8em
+      text-align: center
+      +single-text-shadow
+    h2
+      text-align: center
+      color: #0040be
+      font-size: 1.2em
+      margin-bottom: 9px
+    #top-panel
+      height: 202px
+      +linear-gradient(color-stops(#3469cf,#0a3180))
+      @include border-top-left-radius(10px)
+      @include border-top-right-radius(10px)
+      text-align: center
+      border-bottom: 1px solid #d4d4d4
+      img
+        margin-top: 16px
+    #middle-panel
+      height: 330px
+      +linear-gradient(color-stops(#f0f0f0,#e6e6e6))
+      border-top: 1px solid #fff
+      border-bottom: 1px solid #d4d4d4
+      .left, .center, .right
+        height: 330px
+        margin: 0
+      .left
+        border-right: 1px solid #fff
+      .center
+        border-left: 1px solid #d4d4d4
+        border-right: 1px solid #fff
+      .right
+        border-left: 1px solid #d4d4d4
 
-  #mobile
-    +prepend(1)
-    +column(7)
-    margin-bottom: 36px
+    #bottom-panel
+      clear: both
+      height: 67px
+      border-top: 1px solid #fff
+      +linear-gradient(color-stops(#ededed,#d3d3d3))
+      @include border-bottom-left-radius(10px)
+      @include border-bottom-right-radius(10px)
+      .left, .center, .right
+        text-align: center
+        position: relative
+        top: 35%
+        height: 67px
+      .left
+        @include border-bottom-left-radius(10px)
+      .right
+        @include border-bottom-right-radius(10px)
 
-  #web
-    +prepend(1)
-    +column(7)
-    margin-bottom: 36px
+    .left, .center, .right
+      +single-text-shadow
+    .left
+      +prepend(1)
+      +column(6)
+      +append(1)
+    .center
+      +prepend(1)
+      +column(6)
+      +append(1)
+    .right
+      +prepend(1)
+      +column(6, true)
+      +append(1)
 
-  #philosophy
-    +prepend(1)
-    +column(7, true)
-    margin-bottom: 36px

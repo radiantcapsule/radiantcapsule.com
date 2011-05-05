@@ -2,48 +2,38 @@
 title: Home
 ---
 
-#masthead
-  #logo
-    %img{ :src => "images/logo.png" }
-  #contact
-    %a{ :href => '#', :alt => "Contact us" }
-      -# %img{ :src => "images/contact.png", :title => "Contact" }
-    #info
-      #name
-        Alex Vollmer
-      #email
-        %a{ :href => "mailto:info@radiantcapsule.com"}info@radiantcapsule.com
-      #phone
-        440.253.9046
-      #vcard
-        %a{ :href => "/radiant-capsule.vcf" }vCard
-#columns
-  #mobile
-    .title
-      %img{ :src => "images/mobile.png" }
-    .icon
-      %img{ :src => "images/devices.png" }
-    %strong The future is mobile.
-    Try going for a week without your smartphone and you'll realize how much
-    your life has changed in the last few years. We've never had this much
-    power in our pockets before&mdash;and it's only going to get more
-    powerful. We want to help you be part of that hip-pocket power.
-  #web
-    .title
-      %img{ :src => "images/web.png" }
-    .icon
-      %img{ :src => "images/globe.png" }
-    %strong We get the web.
-    It's all connected to the web. You need to access data and services 
-    from multiple places, but that connectivity needs to be seamless. 
-    Whether it's web services or web standards, we can connect you with the web.
-  #philosophy
-    .title
-      %img{ :src => "images/philosophy.png" }
-    .icon
-      %img{ :src => "images/people.png" }
-    %strong It's about people.
-    We build this stuff to make people's lives better. Technology for the sake
-    of technology is just a waste of time and effort. We want to work on 
-    things that make a difference, no matter how small, in people's lives. We
-    want to help you do the same thing.
+#panel
+  #inner-panel
+    #top-panel
+      %img{ :src => "/images/etched-logo.png" }
+    #middle-panel
+      .left
+        %h1 MOBILE
+        %h2 The future is mobile.
+        Try going for a week without your smartphone and you'll realize how 
+        much your life has changed in the last few years. We've never had this
+        much power in our pockets before—and it's only going to get more
+        powerful. We want to help you be part of that hip-pocket power.
+      .center
+        %h1 WEB
+        %h2 We get the web
+        It's all connected to the web. You need to access data and services
+        from multiple places, but that connectivity needs to be seamless.
+        Whether it's web services or web standards, we can connect you with
+        the web.
+      .right
+        %h1 PEOPLE
+        %h2 It's about people.
+        We build this stuff to make people's lives better. Technology for the sake of
+        technology is just a waste of time and effort. We want to work on things that
+        make a difference, no matter how small, in people's lives. We want to help you
+        do the same thing.
+    #bottom-panel
+      .left
+        %a{ :href => "mailto:info@radiantcapsule.com"}
+          info@radiantcapsule.com
+      .center
+        440.253.9045
+      .right
+        %a{ :href => "/radiant-capsule.vcf" }
+          vCard
