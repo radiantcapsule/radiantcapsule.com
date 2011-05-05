@@ -48,7 +48,7 @@ body
       margin-bottom: 9px
     #top-panel
       height: 202px
-      +linear-gradient(color-stops(#3469cf,#0a3180))
+      @include background-image(linear-gradient(color-stops(#3469cf,#0a3180)))
       @include border-top-left-radius(10px)
       @include border-top-right-radius(10px)
       text-align: center
@@ -57,7 +57,7 @@ body
         margin-top: 16px
     #middle-panel
       height: 330px
-      +linear-gradient(color-stops(#f0f0f0,#e6e6e6))
+      @include background-image(linear-gradient(color-stops(#f0f0f0,#e6e6e6)))
       border-top: 1px solid #fff
       border-bottom: 1px solid #d4d4d4
       .left, .center, .right
@@ -75,7 +75,7 @@ body
       clear: both
       height: 67px
       border-top: 1px solid #fff
-      +linear-gradient(color-stops(#ededed,#d3d3d3))
+      @include background-image(linear-gradient(color-stops(#ededed,#d3d3d3)))
       @include border-bottom-left-radius(10px)
       @include border-bottom-right-radius(10px)
       .left, .center, .right
